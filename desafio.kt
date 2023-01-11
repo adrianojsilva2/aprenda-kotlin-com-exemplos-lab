@@ -20,8 +20,10 @@ fun main() {
     TODO("Simule alguns cenários de teste. Para isso, crie alguns objetos usando as classes em questão.")
 }
 
-*/
 
+
+
+// segundo codigo
 enum class Nivel { BASICO, INTERMEDIARIO, AVANÇADO }
 
 data class Usuario(val nome: String, val age: Int, val id: Int)
@@ -59,4 +61,47 @@ fun main() {
     
    	println(formacao1.inscritos)
   
+}
+*/
+
+
+//terceiro codigo enum class Nivel { BASICO, INTERMEDIARIO, DIFICIL }
+
+class Usuario(vararg nome: String) {
+
+    }
+
+class ConteudoEducacional(vararg nome: String, var duracao: Any)
+
+
+data class Formacao(var nome: Usuario, var conteudos: List<ConteudoEducacional>) {
+
+    val inscritos = mutableListOf<Usuario>(nome)
+
+    fun matricular(usuario: Usuario) {
+
+        inscritos.add(usuario)
+    }
+
+
+
+    fun mostrarinscritos() {
+        inscritos.forEach { println(it) }
+
+    }
+}
+
+fun main() {
+    val content = listOf(ConteudoEducacional("Kotlin Experience", duracao = "40 Horas"))
+
+    val users = Usuario("Victor Hugo","Joelma dos Santos", "Alexandre")
+
+
+    val formacao = Formacao(users, content)
+    formacao.matricular(users)
+    val inscr = (formacao.inscritos)
+
+    formacao.mostrarinscritos()
+
+
 }
