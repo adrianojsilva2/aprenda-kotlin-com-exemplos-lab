@@ -37,10 +37,10 @@ data class Formacao(val nome: String, val conteudos: List<ConteudoEducacional>, 
 }
 
 fun main() {
-   val user1 = Usuario("Bruno", 35, 1)
-   val user2 = Usuario("Miria", 36, 2)
-   val conteudoEducacional = ConteudoEducacional("Tipos de classes em Kotlin", 120, Nivel.AVANÇADO)
-   val conteudoEducacional2 = ConteudoEducacional("Tipos de classes em Kotlin2", 60, Nivel.INTERMEDIARIO)
+   val user1 = Usuario("Aluno 01", 17, 1)
+   val user2 = Usuario("Aluno 02", 15, 2)
+   val conteudoEducacional = ConteudoEducacional("Kotlin avancado", 120, Nivel.AVANÇADO)
+   val conteudoEducacional2 = ConteudoEducacional("Kotlin intermediario", 60, Nivel.INTERMEDIARIO)
    val conteudos = mutableListOf<ConteudoEducacional>()
    conteudos.add(conteudoEducacional)
    conteudos.add(conteudoEducacional2)
